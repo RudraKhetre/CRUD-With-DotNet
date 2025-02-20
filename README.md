@@ -5,7 +5,6 @@
 
 ![image](https://github.com/user-attachments/assets/de33855e-18a0-4dde-b5a7-9a921130fd61)
 
-
 # My ASP.NET Core MVC Project  
 
 ## 📌 Project Overview  
@@ -15,27 +14,27 @@ This is a web application built using **ASP.NET Core MVC** that includes essenti
 
 ## 🔹 Features Implemented  
 
-1. **CRUD Operations**  
+✅ **CRUD Operations** (#CRUD #ASP.NET #EntityFramework)  
    - Create, Read, Update, and Delete functionality for managing data.  
    - Implemented using **Entity Framework Core**.
 
-2. **Search Bar**  
+🔎 **Search Bar** (#Search #LINQ #ASP.NET)  
    - Allows users to search records dynamically.  
    - Case-insensitive search using LINQ queries.
 
-3. **Pagination**  
+📄 **Pagination** (#Pagination #Bootstrap #ASP.NET)  
    - Efficient server-side pagination using `Skip()` and `Take()`.  
    - Bootstrap-based UI for better navigation.
 
-4. **Image Upload**  
+🖼️ **Image Upload** (#FileUpload #ASP.NET #MVC)  
    - Allows users to upload images along with data entries.  
    - Stores images in a dedicated folder with proper validation.
 
-5. **Dropdown Selection**  
+📂 **Dropdown Selection** (#Dropdown #SelectList #ASP.NET)  
    - Users can select options from a **dropdown list**.  
    - Dynamically populated using data from the database.
 
-6. **Radio Buttons**  
+🔘 **Radio Buttons** (#RadioButtons #FormControls #ASP.NET)  
    - Allows users to choose between multiple options in forms.  
    - Used for selecting categories, gender, or status fields.
 
