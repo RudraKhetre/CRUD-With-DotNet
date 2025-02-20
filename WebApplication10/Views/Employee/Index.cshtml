@@ -1,0 +1,62 @@
+﻿@using WebApplication10.Models;
+@model List<Employee>;
+
+<div>
+	<form asp-action="Index" method="post">
+		<input type="text" value="@ViewData["Search"]" name="search" placeholder="Search...." />
+		<button type="submit">search</button>
+	</form>
+</div>
+<div class="text-end">
+	<a class="btn btn-primary" asp-action="Create">Create</a>
+</div>
+<div>
+	<table class="table table-bordered">
+		<thead>
+			<tr>
+				<th>Profile Pic</th>
+				<th>Name</th>
+				<th>Gender</th>
+				<th>Address</th>
+				<th>City</th>
+				<th>Action</th>
+			</tr>
+		</thead>
+		<tbody>
+			@foreach (var obj in Model)
+			{
+				<tr>
+					<td>
+						@if (!string.IsNullOrEmpty(@obj.Img))
+						{
+							<img src="@obj.Img" height="100" width="100" />
+						}
+					</td>
+
+
+					<td>@obj.Name</td>
+					<td>@obj.Gender</td>
+					<td>@obj.Address</td>
+					<td>@obj.City</td>
+					<td>
+						<a class="btn btn-info" asp-action="Edit" asp-route-id="@obj.Id">Edit</a>
+						<form asp-action="Delete" asp-route-id="@obj.Id" method="post">
+							<button class="btn btn-danger" type="submit">Delete</button>
+						</form>
+					</td>
+				</tr>
+			}
+		</tbody>
+	</table>
+</div>
+
+<nav>
+	<ul class="pagination" style="justify-content: flex-end !important">
+		@for (int i = 1; i <= (int)ViewData["TotalPages"]; i++)
+		{
+			<li class="page-item @(i == (int)ViewData["Page"] ? "active" : "")">
+				<a class="page-link" asp-action="Index" asp-route-search="@ViewData["Search"]" asp-route-page="@i">@i</a>
+			</li>
+		}
+	</ul>
+</nav>

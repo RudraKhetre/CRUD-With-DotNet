@@ -1,0 +1,21 @@
+﻿@model WebApplication10.Models.Employee
+
+<div>
+	<form asp-action="Edit" method="post" enctype="multipart/form-data">
+		Name : <input type="text" asp-for=Name class="form-control" />
+		<div>
+
+			Gender : <input type="radio" asp-for=Gender value="Male" /> Male
+			<input type="radio" asp-for=Gender value="Female" /> Female
+		</div>
+		Address : <input type="text" asp-for=Address class="form-control" />
+		City : <select asp-for="City" class="form-control">
+			<option value="">Select City ^</option>
+			<option value="Pune">Pune</option>
+			<option value="Mumbai">Mumbai</option>
+		</select>
+
+		Img : <input type="file" asp-for=Img name="formFile" class="form-control" accept="/*" />
+		<button type="submit" class="btn btn-info">Submit</button>
+	</form>
+</div>
