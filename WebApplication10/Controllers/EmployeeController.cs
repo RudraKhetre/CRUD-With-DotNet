@@ -96,5 +96,13 @@ namespace WebApplication10.Controllers
             appDbContext.SaveChanges();
             return RedirectToAction("Index");
         }
+        [HttpPost]
+        public IActionResult Delete(int id)
+        {
+            var emp = appDbContext.Employees.Find(id);
+            appDbContext.Remove(emp);
+            appDbContext.SaveChanges();
+            return RedirectToAction("Index");
+        }
     }
 }
